@@ -1,0 +1,47 @@
+@use "../../styles/global" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#bg-resumo-doacoes {
+    padding: 1.5em 0;
+    background: black;
+    color: white;
+
+    #content-resumo-doacoes {
+        display: grid;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        margin: 0 25em;
+    
+        div {
+            margin: 1em 0;
+        }
+
+        iframe {
+            width: 40em;
+            height: 25em;
+            border-radius: 30px;
+            border: #F68300;
+        }
+    }
+    
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 4em;
+        font-weight: 500;
+        margin: 0.5em 0;
+    }
+
+    p {
+        margin: 0.4em 0;
+        font-size: 1.5em;
+        font-weight: 400;
+        text-align: justify;
+    }
+}

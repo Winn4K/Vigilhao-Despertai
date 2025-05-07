@@ -1,0 +1,46 @@
+@use "../../styles/global" as *;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  background-color: $primary-color;
+  padding: 1em 0;
+
+  nav {
+    margin-top: 2em;
+  }
+
+  #logo-header {
+    width: 50px;
+  }
+
+  #menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .item-menu-header{
+    a {
+      margin-left: 2.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-family: Kantumruy Pro;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: #DB0000;
+    }
+  }
+}
+

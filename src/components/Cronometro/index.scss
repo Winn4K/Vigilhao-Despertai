@@ -1,0 +1,13 @@
+@use "../../styles/global" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#cronometro {
+    background-color: #DB0000;
+    font-size: 2em;
+    text-align: center;
+    font-family: Protest Guerrilla;
+}

@@ -1,0 +1,47 @@
+@use "../../styles/global" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#bg-infoDoacoes {
+    padding: 3em 0;
+    background: linear-gradient(to bottom, #F0C000, #F68300 , #DB0000); /* amarelo → vermelho */
+    color: white;
+
+    #content-infoDoacoes {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 40em 40em;
+        gap: 7em;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        div {
+            margin: 2em 0;
+            text-align: left;
+            
+        }
+
+        #titulo {
+            width: 15em;
+        }
+
+        p {
+            margin: 0.5em 0;
+        }
+    }
+
+    #img-banner {
+        width: 45em;
+    }
+
+    p {
+        margin: 0.4em 0;
+        font-size: 2.2em;
+        font-weight: 600;
+        text-align: justify;
+    }
+}

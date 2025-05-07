@@ -1,0 +1,53 @@
+@use "../../styles/global" as *;
+
+#bg-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1.3em;
+
+    #title-footer {
+        margin-top: 0.3em;
+
+        h1 {
+            font-size: 2.4em;
+            font-weight: 500;
+        }
+    }
+
+    #content-footer {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 28em;
+        margin-right: 6em;
+        justify-content: center;
+    }
+
+    .content-grid-footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 0.5em;
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    #copyright-footer {
+        justify-self: center;
+        width: 95%;
+        padding-top: 1em;
+        border-top: 1px solid white;
+        text-align: center;
+    }
+
+}
