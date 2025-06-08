@@ -65,7 +65,6 @@
       position: relative;
       top: 4.2em; // ajuste conforme a altura real do #cronometro
       left: 0;
-      width: fit-content;
       z-index: 1000;
       display: grid;
       grid-auto-flow: row;
@@ -102,7 +101,7 @@
       }
 
       .item-menu-header{
-        width: 4.8em;
+        width: 5em;
         border-left: 0.4px solid gray;
         height: 2.5em;
 
