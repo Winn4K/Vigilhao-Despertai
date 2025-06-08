@@ -1,15 +1,27 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LogoBranco from "../../assets/svg/logo-branco.svg";
 import Cronometro from "../Cronometro/cronometro";
-import './index.scss'
+import './index.scss';
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30); // ativa quando rolar mais de 30px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <Cronometro/>
-      <div id="header">
+      <Cronometro />
+      <div id="header" className={isScrolled ? "scrolled" : ""}>
         <div>
-          <img src={LogoBranco} alt="Logo Branco" id="menu-header" />
+          <img src={LogoBranco} alt="Logo Branco" id="logo-header" />
         </div>
         <nav>
           <ul id="menu-header">

@@ -44,4 +44,42 @@
         font-weight: 400;
         text-align: justify;
     }
+
+    @media (max-width: 768px) {
+        #content-resumo-doacoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        margin: 0 2em;
+    
+            div {
+                margin: 1em 0;
+            }
+
+            iframe {
+                width: 22em;
+                height: 15em;
+                border-radius: 20px;
+                border: #F68300;
+            }
+        }
+    
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 3em;
+            font-weight: 500;
+            margin: 0.5em 0;
+        }
+
+        p {
+            margin: 0.4em 0;
+            font-size: 1.2em;
+            font-weight: 400;
+            text-align: justify;
+        }
+    }
+
 }

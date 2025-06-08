@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './index.scss'
+import './index.scss';
 
 const Cronometro = () => {
   const [tempoRestante, setTempoRestante] = useState({
@@ -10,8 +10,10 @@ const Cronometro = () => {
     segundos: 0,
   });
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
-    const destino = new Date("2025-07-07T22:00:00"); // Altere para a data exata do Vigilhão
+    const destino = new Date("2025-07-07T22:00:00");
 
     const atualizarTempo = () => {
       const agora = new Date();
@@ -34,7 +36,6 @@ const Cronometro = () => {
       const horas = Math.floor((diferenca / 1000 / 60 / 60) % 24);
       const diasTotal = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
-      // Estimativa simples: 1 mês = 30 dias
       const meses = Math.floor(diasTotal / 30);
       const dias = diasTotal % 30;
 
@@ -42,14 +43,23 @@ const Cronometro = () => {
     };
 
     const intervalo = setInterval(atualizarTempo, 1000);
-    atualizarTempo(); // Primeira execução imediata
+    atualizarTempo();
 
     return () => clearInterval(intervalo);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div id="cronometro">
-      FALTAM {tempoRestante.meses} MESES, {tempoRestante.dias} DIAS, {tempoRestante.horas} HORAS, {tempoRestante.minutos} MIN E {tempoRestante.segundos} SEGUNDOS PARA O VIGILHÃO DESPERTAI 2025
+    <div id="cronometro" className={isScrolled ? "scrolled" : ""}>
+      <span>FALTAM {tempoRestante.meses} MESES, {tempoRestante.dias} DIAS, {tempoRestante.horas} HORAS, {tempoRestante.minutos} MIN E {tempoRestante.segundos} SEGUNDOS PARA O VIGILHÃO DESPERTAI 2025</span>
     </div>
   );
 };

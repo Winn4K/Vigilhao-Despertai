@@ -1,21 +1,45 @@
-@use "../../styles/global" as *;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 #cronometro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
   background-color: #DB0000;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  font-family: Protest Guerrilla;
+  font-family: "Protest Guerrilla", sans-serif;
+  padding: 0.2em 1em;
+
+  display: flex;               // força comportamento flexível
+  justify-content: center;
+  align-items: center;
+
+  span {
+    display: inline-block;     // força a quebra dentro do conteúdo
+    max-width: 100%;
+    word-break: break-word;    // quebra entre palavras
+    white-space: normal;       // permite quebras de linha
+    text-align: center;
+    font-family: "Protest Guerrilla", sans-serif;
+  }
+
+  &.scrolled {
+    background-color: rgba(219, 0, 0, 0.709);
+    backdrop-filter: blur(5px);
+  }
 
   @media (max-width: 768px) {
+    position: absolute;
     font-size: 1.1em;
-    padding: 0.8em 1em;
     line-height: 1.4;
+    padding: 0.6em 0.5em;
+
+    span {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
     text-align: center;
-    word-break: break-word;
+    }
   }
 }

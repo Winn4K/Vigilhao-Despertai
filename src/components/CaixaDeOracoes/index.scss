@@ -92,4 +92,93 @@
         font-weight: 600;
         text-align: justify;
     }
+
+    @media (max-width: 768px) {
+        #content-caixinha-de-oracoes {
+            display: flex;
+            flex-direction: column-reverse;
+            grid-template-columns: 40em 40em;
+            gap: 0em;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 0.2em;
+            }
+
+            #input-box {
+                margin: 1em 2em;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                gap: 1.3em;
+            }
+
+            #titulo {
+                align-self: center;
+                width: 25em;
+            }
+
+            p {
+                margin: 0.5em 0;
+            }
+        }
+
+        label {
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+
+        .input {
+            width: 20em;
+            height: 2em;
+            border-radius: 0.5em;
+            border: none;
+            font-size: 1.1em;
+            padding: 0 1em;
+        }
+
+        #input-descricao {
+            height: 8em;
+            padding: 1em 1em;
+            line-break: normal;
+            resize: none;
+            
+        }
+
+        #enviar {
+            width: 8em;
+            padding: 0.8em 1em;
+            border-radius: 0.8em;
+            color: white;
+            font-size: 1.3em;
+            font-weight: 600;
+            align-self: center;
+            margin: 1em 2em;
+            background: linear-gradient(to right, #F0C000, #F68300 , #DB0000); /* amarelo → vermelho */
+        }
+
+        #enviar:hover {
+            opacity: 80%;
+            transform: translateY(-0.3em);
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        #img-banner {
+            text-align: center;
+            width: 20em;
+            height: 24em;
+        }
+
+        p {
+            margin: 0.4em 0;
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: justify;
+        }
+    }
 }

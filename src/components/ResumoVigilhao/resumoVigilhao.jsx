@@ -6,7 +6,7 @@ const ResumoVigilhao = () => {
     <div id='bg-vigilhao'>
         <div id='content-vigilhao'>
             <div>
-                <img src="/assets/svg/resumoVigilhao/titulo.svg" alt="" />
+                <img id='titulo-vigilhao' src="/assets/svg/resumoVigilhao/titulo.svg" alt="" />
                 <div>
                     <p>Você já ouviu falar do Vigilhão Despertai?</p>
                     <p>É o grande evento do ano, uma noite inesquecível de renovação e poder que reúne irmãos em Cristo de toda parte!</p>
@@ -16,7 +16,7 @@ const ResumoVigilhao = () => {
                     <p>Não perca essa chance de viver um verdadeiro avivamento!</p>
                 </div>
             </div>
-            <img src="/assets/svg/resumoVigilhao/img1.svg" alt="" />
+            <img id='img-resumo-vigilhao' src="/assets/svg/resumoVigilhao/img1.svg" alt="" />
         </div>
     </div>
   )

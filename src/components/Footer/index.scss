@@ -50,4 +50,45 @@
         text-align: center;
     }
 
+    @media (max-width: 768px) {
+
+    #title-footer {
+        margin-top: 0.3em;
+
+        h1 {
+            font-size: 2em;
+            font-weight: 500;
+        }
+    }
+
+        #content-footer {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            margin: 0 1em;
+            justify-content: center;
+        }
+
+        .content-grid-footer {
+            display: grid;
+            grid-auto-flow: row;
+
+            h2 {
+                font-size: 1.2em;
+                font-weight: 500;
+            }
+            p {
+                text-align: center;
+                font-size: 1em;
+                margin: 0;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 1em;
+            margin: 0;
+        }
+    }
 }

@@ -16,7 +16,7 @@ const Oracoes = () => {
                 </div>
                 <button><Link to="/caixinha-de-oracoes">Deposite seu pedido de oração</Link></button>
             </div>
-            <img src="/assets/svg/caixinhaOracoes/img1.svg" alt="" />
+            <img id='img-caixinha-oracao' src="/assets/svg/caixinhaOracoes/img1.svg" alt="" />
         </div>
     </div>
   )

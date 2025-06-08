@@ -6,7 +6,7 @@ const Doacoes = () => {
   return (
     <div id='bg-doacoes'>
         <div id='content-doacoes'>
-            <img src="/assets/svg/doacoes/img1.svg" alt="" />
+            <img id='img-doacoes' src="/assets/svg/doacoes/img1.svg" alt="" />
             <div>
                 <h1>Doações ♡</h1>
                 <div>

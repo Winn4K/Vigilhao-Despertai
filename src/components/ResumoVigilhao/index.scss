@@ -35,4 +35,46 @@
         font-weight: 400;
         text-align: justify;
     }
+
+    @media (max-width: 768px) {
+        
+        padding: 2em;
+        
+        #content-vigilhao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+            gap: 0;
+
+            div {
+                margin: 0;
+                
+            }
+
+            p {
+                margin: 0.5em 1em;
+            }
+        }
+
+        #titulo-vigilhao{
+            width: 25em;
+            margin: 1.5em 0;
+        }
+
+        p {
+            margin: 0.4em 0;
+            font-size: 1.2em;
+            font-weight: 400;
+            text-align: justify;
+        }
+
+        #img-resumo-vigilhao {
+            text-align: center;
+            width: 20em;
+            height: 24em;
+        }
+    }
 }
+
